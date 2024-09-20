@@ -21,23 +21,4 @@ function closebar() {
     menubar.style.top = "-950px"
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const boxes = document.getElementsByTagName('body');
 
-    const checkVisibility = () => {
-        const triggerBottom = window.innerHeight * 0.8;
-
-        boxes.forEach(box => {
-            const boxTop = box.getBoundingClientRect().top;
-
-            if (boxTop < triggerBottom) {
-                box.classList.add('visible');
-            } else {
-                box.classList.remove('visible');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // Initial check on page load
-});

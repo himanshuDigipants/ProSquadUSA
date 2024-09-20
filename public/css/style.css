@@ -5,8 +5,7 @@
 
 body {
     margin: 0;
-    /* font-family: Georgia, serif; */
-    /* background: rgb(248, 241, 228); */
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -66,24 +65,19 @@ nav ul li a:hover {
     top: 100%;
     left: 0;
     background-color: #181111;
-    color: white;
-    list-style: disc;
     padding: 0;
     margin: 0;
+    list-style: none;
     border-radius: 15px;
 
 }
 
 .dropdown-menu li {
     margin: 0;
-    width: 1000px;
-
 }
 
 .dropdown-menu li a {
     display:block;
-    
- 
     text-decoration: underline;
 }
 
@@ -91,6 +85,7 @@ nav ul li a:hover {
     padding: 10px;
     color: gray;
     display: block;
+   
 
 }
 
@@ -116,7 +111,7 @@ nav ul li a:hover {
 .Box {
     display: flex;
     margin-top: 1%;
-    background-image: url(images/bg.avif);
+    background-image: url(/images/background.png);
     background-size: cover;
     margin-left: 1%;
     width: 98%;
@@ -251,8 +246,6 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-
-
 }
 
 .left .text {
@@ -266,13 +259,13 @@ nav ul li a:hover {
     height: 70vh;
     width: 100%;
     padding: 30px;
-    background: white;
-    
-    box-shadow:0px 5px 10px 10px whitesmoke;
+   
+
 }
 .column1 {
     width: 50%;
-    box-shadow:0px 5px 10px 10px whitesmoke;
+    background: white;
+    box-shadow:0px 5px 4px 4px whitesmoke;
 
 }
 .column2 {
@@ -283,7 +276,6 @@ nav ul li a:hover {
 
 .expImg1 {
     display: flex;
-    /* width: 100%; */
     justify-content: space-between;
     padding: 30px;
 }
@@ -307,7 +299,8 @@ nav ul li a:hover {
     width: 90%;
     height: 17vh;
     border-radius: 15px;
-    background-color: #f6e3e3;
+    /* background-color: #f6e3e3; */
+    background: whitesmoke;
     padding: 10px;
     margin-bottom: 5px;
     margin-left: 20px;
@@ -348,15 +341,24 @@ nav ul li a:hover {
 
 }
 
+
 .item {
     display: flex;
-    box-shadow:0px 5px 10px 10px whitesmoke;
+    background:whitesmoke;
+    box-shadow:5px 1px 10px 6px rgb(236, 235, 235);
     /* background: orange; */
 }
+.right1,.left1 {
+border-left:2px solid orange ;
+border-top:2px solid orange ;
+}
+
 
 .mid-item .mid1 {
     border-radius: 10px;
-    background-color: #f6e3e3;
+ 
+    background: rgb(233, 230, 230);
+    border: 1px solid rgb(235, 188, 188);
     margin: 20px 10px;
     width: 300px;
     height: 200px;
@@ -364,7 +366,7 @@ nav ul li a:hover {
     padding: 10px 15px;
 
 }
-
+ 
 .mid-item {
     border-radius: 10px;
     display: flex;
@@ -374,16 +376,18 @@ nav ul li a:hover {
 }
 
 .mid-item .mid2 {
-    background-color: #f6e3e3;
+    background: rgb(233, 230, 230);
+    color:rgb(10, 7, 7);
     margin: 20px 10px;
     width: 300px;
     height: 200px;
     border-radius: 10px;
     padding: 10px 15px;
+    border: 1px solid rgb(235, 188, 188);
 }
 
 .left-item .left1 {
-    background: grey;
+   background: white;
     margin: 70px 10px;
     width: 270px;
     height: 250px;
@@ -391,7 +395,7 @@ nav ul li a:hover {
 }
 
 .right-item .right1 {
-    background: grey;
+  background: white;
     float: end;
     margin: 70px 10px;
     width: 270px;
@@ -403,7 +407,7 @@ nav ul li a:hover {
 .item img {
     height: 250px;
     border-radius: 10px;
-
+    margin: 8px;
 }
 
 .goto-btn {
@@ -421,10 +425,12 @@ nav ul li a:hover {
 .answerBox {
     display: flex;
     height: 50vh;
-    max-width: 100%;
+    width: 100%;
     align-items: center;
     justify-content: space-around;
     margin: 20px;
+    background:whitesmoke;
+    margin: auto;
 
 
 }
@@ -440,7 +446,7 @@ nav ul li a:hover {
 }
 
 .ansB p {
-    font-family: 'Arial Narrow', Arial, sans-serif;
+  
     padding: 4px 4px;
 }
 
@@ -568,7 +574,7 @@ nav ul li a:hover {
 
 .container3 {
     display: flex;
-    background-image: url(images/emp.jpg);
+    background-image: url(/images/email.png);
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -651,18 +657,6 @@ main {
     margin-left: 80px;
 }
 
-.BoxText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(40, 48, 86);
-    color: white;
-    width: 220px;
-    height: 120px;
-    padding: 20px;
-    border-radius: 20px;
-}
-
 .imgB2 img {
     height: 400px;
     width: 350px;
@@ -671,11 +665,17 @@ main {
 
 .BoxC {
     margin: 30px;
-
-
-
 }
-
+.BoxC i{
+    display: flex;
+    background: rgb(150, 220, 45);
+    height: 70px;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+    font-size:40px;
+    border-radius: 15px;
+}
 .BoxC1 {
     display: flex;
     margin: 20px;
@@ -703,7 +703,9 @@ main {
     padding: 20px;
     justify-content: space-around;
 }
-
+.Box-Img img {
+    margin-left: 10px;
+}
 .BoxD-text div {
     margin: 30px 0px;
 
@@ -723,11 +725,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
 }
 
 .About-bg img {
     width: 98%;
-    height: 85vh;
+    height:auto;
     margin: 1%;
     border-radius: 10px;
 }
@@ -736,7 +739,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 50vh;
+    height: auto;
     width: 100%;
 }
 
@@ -753,7 +756,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 90vh; */
     width: 100%;
     color: white;
 }
@@ -777,7 +779,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: auto;
     width: 100%;
     color: white;
     border-radius: 15px;
@@ -804,10 +806,11 @@ main {
 .list {
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height:auto;
     align-items: center;
     text-align: center;
     font-size: 20px;
+    font-weight: bold;
     justify-content: space-around;
     padding: 10px;
     margin: 20px;
@@ -815,11 +818,14 @@ main {
 }
 
 .list span {
-    background: rgb(39, 18, 58);
+    background: rgb(24, 4, 42);
     padding: 20px 20px;
     border-radius: 100%;
     color: white;
 
+}
+.list p{
+    margin-top:40px;
 }
 
 .our-expert {
@@ -869,7 +875,7 @@ main {
 
 .container4 {
     display: flex;
-    background-image: url(images/expert3.avif);
+    background-image: url(/images/help.png);
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -911,7 +917,7 @@ main {
 .contact-deatils {
     display: flex;
     background: white;
-    height: 90vh;
+    height: auto;
 }
 
 .contact-left {
@@ -1065,8 +1071,13 @@ textarea {
     padding: 10px 15px;
     border-radius: 14px;  
 }
+.faq-toggle {
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 100%;
+}
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1019px) {
     body {
         box-sizing: border-box;
         width: 100vw;
@@ -1159,8 +1170,11 @@ textarea {
 
     .contentContainer {
 
-        margin-bottom: 30px;
-        margin-top: 30px;
+   display: flex;
+   justify-content: space-evenly;
+   /* text-align:center; */
+   align-items:flex-start;
+   flex-direction: column;
     }
 
     .textContent {
@@ -1189,7 +1203,6 @@ textarea {
     .left-item {
         display: flex;
         flex-direction: column-reverse;
-
     }
 
     .left1,
@@ -1355,7 +1368,7 @@ textarea {
     .BoxD-text {
         font-size: 14px;
     }
-.a-bg{
+     .a-bg{
     height: auto;
 }
 
@@ -1450,7 +1463,7 @@ height: auto;
 
 }
 
-@media screen and (min-width:1025px) and (max-width:1220px){
+@media screen and (min-width:1020px) and (max-width:1220px){
     body{
         max-width: 100%;
         box-sizing: border-box;

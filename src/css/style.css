@@ -1077,6 +1077,21 @@ textarea {
     border-radius: 100%;
 }
 
+.pol-text{
+    display: flex;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    /* justify-content: center;  */
+}
+@media screen and (max-width:500px) {
+    .pol-text{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: small;
+    }
+}
 @media screen and (max-width: 1019px) {
     body {
         box-sizing: border-box;

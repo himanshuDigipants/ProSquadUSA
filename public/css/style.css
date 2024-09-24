@@ -6,6 +6,18 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+@keyframes my-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 nav .fas {
     display: none;
 }

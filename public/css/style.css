@@ -5,7 +5,6 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-
 }
 nav .fas {
     display: none;
@@ -22,6 +21,7 @@ nav .fas {
     width: 100%;
     color: black;
     padding: 20px 0;
+    
 }
 .logo img {
     height: 60px;
@@ -165,6 +165,11 @@ nav ul li a:hover {
     margin-top: 100px;
     margin-bottom: 20px;
     padding: 20px;
+    animation: my-animation 1s ease infinite;
+    animation-iteration-count: 5;
+    animation-fill-mode: forwards;
+  
+
 }
 
 .mainContent {

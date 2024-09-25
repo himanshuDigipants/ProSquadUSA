@@ -2,25 +2,17 @@
     box-sizing: border-box;
     max-width: 100%;
 }
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
-@keyframes my-animation {
-    0% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
 nav .fas {
     display: none;
+    color: white;
 }
+
 .container {
     display: flex;
     align-items: center;
@@ -29,22 +21,25 @@ nav .fas {
     flex-wrap: nowrap;
     margin: 0 auto;
     padding: 0 20px;
-    background-color: #f6e3e3;
+    /* background-color: #f6e3e3; */
+    background-color: #1d3557;
     width: 100%;
     color: black;
     padding: 20px 0;
-    
+
 }
-.logo img {
-    height: 60px;
-    width: 140px;
+
+.logo1 img {
+    height: 70px;
+    width: 300px;
     margin-left: 30px;
 }
+
 .nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;  
+    display: flex;
     margin-right: 30px;
 }
 
@@ -54,7 +49,7 @@ nav .fas {
 }
 
 .nav-list a {
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 10px;
     display: block;
@@ -96,7 +91,7 @@ nav ul li a:hover {
     display: block;
 }
 
-.btn1{
+.btn1 {
     background: rgb(165, 216, 89);
     border-radius: 10px;
     border: none;
@@ -114,18 +109,31 @@ nav ul li a:hover {
 .Box {
     display: flex;
     margin-top: 1%;
-    background-image: url(/images/background.png);
+    /* background-image: url(/images/background.png); */
     background-size: cover;
+    justify-content: center;
+    align-items: center;
     margin-left: 1%;
     width: 98%;
-    height: 90vh;
+    height: 50vh;
     border-radius: 10px;
     align-items: center;
+    background-color: #1d3557;
 
 }
 
 .contentContainer {
-    margin-left: 5%;
+
+    width: 45%;
+}
+
+.Box img {
+    border-radius: 15px;
+    margin: 15px;
+    width: 45%;
+    height: 40vh;
+
+
 }
 
 .contentContainer div {
@@ -133,14 +141,14 @@ nav ul li a:hover {
 }
 
 .contentContainer h1 {
-    font-size: 50px;
+    /* font-size: 50px; */
     color: white;
     font-weight: bolder;
 }
 
 .contentContainer p {
     color: white;
-    font-size: 20px;
+    /* font-size: 20px; */
 
 }
 
@@ -159,7 +167,7 @@ nav ul li a:hover {
 .startBtn {
     padding: 10px 20px;
     background: rgb(165, 216, 89);
-    border-radius: 25px;
+    border-radius: 10px;
     border: none;
     text-decoration: none;
     color: black;
@@ -173,6 +181,8 @@ nav ul li a:hover {
 .works {
     display: flex;
     background: rgb(230, 228, 226);
+    /* background-color: #184fc2; */
+
     height: auto;
     margin-top: 100px;
     margin-bottom: 20px;
@@ -180,8 +190,10 @@ nav ul li a:hover {
     animation: my-animation 1s ease infinite;
     animation-iteration-count: 5;
     animation-fill-mode: forwards;
-  
+}
 
+.row1:hover {
+    background-color: #457b9d;
 }
 
 .mainContent {
@@ -197,6 +209,7 @@ nav ul li a:hover {
     width: 40%;
 
 }
+
 .row1 {
     display: flex;
     height: 200px;
@@ -259,26 +272,35 @@ nav ul li a:hover {
 }
 
 .expertBox {
+    /* background-color: #457b9d; */
     display: flex;
     margin-top: 40px;
-    height: 70vh;
+    /* height: 70vh; */
     width: 100%;
     padding: 30px;
+    background-color: #09274e;
 
 
 }
 
 .column1 {
     width: 50%;
-    background: white;
-    box-shadow: 0px 5px 4px 4px whitesmoke;
+    /* background-color:#1d3557; */
+    margin-top: 10%;
+
 
 }
 
 .column2 {
     width: 50%;
-    box-shadow: 0px px 10px 10px whitesmoke;
+    transition: 0.5s;
 
+
+}
+
+.exBox:hover {
+    background: green;
+    transition: 0.5s;
 }
 
 .expImg1 {
@@ -306,8 +328,9 @@ nav ul li a:hover {
     width: 90%;
     height: 17vh;
     border-radius: 15px;
-    /* background-color: #f6e3e3; */
-    background: whitesmoke;
+
+
+    color: white;
     padding: 10px;
     margin-bottom: 5px;
     margin-left: 20px;
@@ -329,7 +352,7 @@ nav ul li a:hover {
 }
 
 .container2 {
-    background: white;
+    /* background: #f1faee; */
     padding-bottom: 100px;
 
 }
@@ -351,9 +374,6 @@ nav ul li a:hover {
 
 .item {
     display: flex;
-    background: whitesmoke;
-    box-shadow: 5px 1px 10px 6px rgb(236, 235, 235);
-    /* background: orange; */
 }
 
 .right1,
@@ -438,7 +458,9 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-around;
     margin: 20px;
-    background: whitesmoke;
+    /* background: whitesmoke; */
+    color: whitesmoke;
+    background-color: #1d3557;
     margin: auto;
 
 
@@ -615,21 +637,25 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
 
+
 }
 
 .footer1 a {
     text-decoration: none;
     color: grey;
     margin: 2px;
+    margin-top: 10px;
 }
 
 .footer1 a:hover {
     color: orange;
+
 }
 
 .footer2 {
     display: flex;
     justify-content: space-between;
+
 }
 
 
@@ -1106,25 +1132,69 @@ textarea {
     margin-right: 20%;
     /* justify-content: center;  */
 }
-.social-icon{
+
+.social-icon {
     display: flex;
-    justify-content:center; 
-    margin: 20px; 
-    font-size:30px;
-   
+    justify-content: center;
+    margin: 20px;
+    font-size: 30px;
+
 }
-.social-icon a{
-    text-decoration:none;
+
+.social-icon a {
+    text-decoration: none;
     margin: 20px;
 }
-@media screen and (max-width:500px) {
+
+@media screen and (min-width: 1440px) {
+    .Alldiv {
+        max-width: 1440px;
+        margin: 88px auto;
+    }
+}
+
+@media (max-width: 500px) {
     .pol-text {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
         font-size: small;
     }
+
+    .Box {
+        flex-direction: column-reverse;
+    }
+
+    .Box img {
+        width: 400px;
+        height: 180px;
+        margin-top: 110px;
+    }
+
+    .contentContainer div {
+        display: block;
+    }
+
+    .startBtn {
+        margin-bottom: 120px;
+        margin-left: 30px;
+    }
+    .container2{
+        margin-top: 60px;
+   margin-bottom: 60px; 
+    }
+    .ExpertSquad{
+    margin-top: -130px;
+    }
+
+  .logo1{
+    margin-right: 80px;
+  }
+  .goto-btn{
+    margin-top: 10px;
+  }
 }
+
 .social-icons {
     display: flex;
     flex-direction: column;
@@ -1137,11 +1207,11 @@ textarea {
     font-size: 30px;
     /* float: left; */
     color: white;
-    font-weight:900;
+    font-weight: 900;
     margin: 10px;
     text-decoration: none;
-
 }
+
 
 @media screen and (max-width: 1019px) {
     body {
@@ -1163,7 +1233,7 @@ textarea {
         position: fixed;
         top: 0;
         right: -30px;
-        top: -950px;
+        top: -1000px;
         width: 100%;
         height: 100%;
         z-index: 2;
@@ -1221,8 +1291,12 @@ textarea {
 
     .Box {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         height: 60vh;
+    }
+
+    .bg-imaze img {
+        width: 98%;
     }
 
     .bgBtn {
@@ -1232,16 +1306,19 @@ textarea {
     .contentContainer div {
         justify-content: space-between;
         margin-top: 30px;
-
     }
 
-    .contentContainer {
 
+    .contentContainer {
         display: flex;
-        justify-content: space-evenly;
-        /* text-align:center; */
+
         align-items: flex-start;
         flex-direction: column;
+        width: auto;
+    }
+
+    .bg-imaze {
+        width: 40%;
     }
 
     .textContent {
@@ -1249,20 +1326,22 @@ textarea {
         justify-content: center;
         text-align: left;
         flex-direction: column;
+        margin-left: 30px;
     }
 
     .textContent h1 {
         font-size: 22px;
     }
 
-    .ExpertSquad {
-        margin-top: 300px;
-
-    }
+  
 
     .container2 {
         padding: 0;
-        padding-top: 100px;
+        /* padding-top: 100px; */
+    }
+    .goto-btn{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .item,

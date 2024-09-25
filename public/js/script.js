@@ -18,7 +18,7 @@ function openbar() {
     menubar.style.top = "0"
 }
 function closebar() {
-    menubar.style.top = "-950px"
+    menubar.style.top = "-100%"
 }
 
 

@@ -1168,12 +1168,14 @@ textarea {
     .Box img {
         width: 350px;
         height: 170px;
-        margin-top: 110px;
+        margin-top: 130px;
     }
-    .bgBtn{
+
+    .bgBtn {
         font-size: small;
     }
-    .textContent{
+
+    .textContent {
         font-size: small;
     }
 
@@ -1185,20 +1187,24 @@ textarea {
         margin-bottom: 120px;
         margin-left: 30px;
     }
-    .container2{
+
+    .container2 {
         margin-top: 60px;
-   margin-bottom: 60px; 
-    }
-    .ExpertSquad{
-    margin-top: -130px;
+        margin-bottom: 60px;
     }
 
-  .logo1{
-    margin-right: 80px;
-  }
-  .goto-btn{
-    margin-top: 10px;
-  }
+    .ExpertSquad {
+        margin-top: -130px;
+    }
+
+    .logo1 {
+        margin-right: 80px;
+    }
+
+    .goto-btn {
+        margin-top: 10px;
+        font-size: x-small;
+    }
 }
 
 .social-icons {
@@ -1339,13 +1345,14 @@ textarea {
         font-size: 22px;
     }
 
-  
+
 
     .container2 {
         padding: 0;
         /* padding-top: 100px; */
     }
-    .goto-btn{
+
+    .goto-btn {
         margin-top: 10px;
         margin-bottom: 10px;
     }

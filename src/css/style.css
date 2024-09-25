@@ -1166,9 +1166,15 @@ textarea {
     }
 
     .Box img {
-        width: 400px;
-        height: 180px;
+        width: 350px;
+        height: 170px;
         margin-top: 110px;
+    }
+    .bgBtn{
+        font-size: small;
+    }
+    .textContent{
+        font-size: small;
     }
 
     .contentContainer div {

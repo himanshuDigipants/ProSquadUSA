@@ -22,22 +22,4 @@ function closebar() {
 }
 
 
-// document.addEventListener('scroll', () => {
-//     const Bxes = document.querySelectorAll('.Bx');
-//     Bxes.forEach((Bx, index) => {
-//         const BxTop = Bx.getBoundingClientRect().top;
-//         const windowHeight = window.innerHeight;
 
-//         // Check if the Bx is fully in view
-//         if (BxTop < windowHeight && BxTop > 0 && Bx.classList.contains('hidden')) {
-//             const loader = Bx.querySelector('.loader');
-//             loader.style.display = 'block'; // Show loader
-
-//             setTimeout(() => {
-//                 Bx.classList.remove('hidden');
-//                 Bx.classList.add('visible');
-//                 loader.style.display = 'none'; // Hide loader after content is visible
-//             }, (index + 1) * 1000); // Stagger the loading based on index (1s for first, 2s for second, etc.)
-//         }
-//     });
-// });

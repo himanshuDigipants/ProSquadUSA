@@ -1,3 +1,5 @@
+
+
 document.querySelectorAll('.faq-header').forEach(header => {
     header.addEventListener('click', () => {
         const content = header.nextElementSibling;
@@ -20,6 +22,30 @@ function openbar() {
 function closebar() {
     menubar.style.top = "-100%"
 }
+ 
+
+const m = document.getElementById('responsiveImage');
+
+console.log(m);
+
+if (window.matchMedia("(max-width: 500px)").matches) {
+    m.src = '/images/bgImg2.png';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

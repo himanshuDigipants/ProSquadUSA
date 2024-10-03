@@ -5,7 +5,8 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     scroll-behavior:smooth;
   background-color: #ddd;
  
@@ -13,6 +14,71 @@ body {
 
 
 }
+ /* **********expertBox small screen********** */
+ .dtl {
+
+    display:none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top:20px;
+    margin-bottom:20px;
+
+
+
+}
+
+.s-img {
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border-left: 2px solid orange;
+    border-top: 2px solid orange;
+    background: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius:10px ;
+   
+  
+}
+
+.s-img img {
+    width: 100%;
+    border-radius:5px;
+    margin: 10px;
+    margin-bottom: 0;
+    display: block;
+   max-height: 400px;
+    transition: transform 0.5s;
+
+}
+ .description {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(58, 45, 45, 0.663), #00117a);
+    color: #ddd;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.s-img:hover img {
+    transform: scale(1.5);
+}
+
+.s-img:hover .description {
+    height: 100%;
+}
+
+
+/* *********navbar********** */
 
 nav .fas {
     display: none;
@@ -47,6 +113,7 @@ nav .fas {
     margin: 0;
     display: flex;
     margin-right: 30px;
+    
 }
 
 .nav-list li {
@@ -1164,13 +1231,13 @@ textarea {
 .social-icon {
     display: flex;
     justify-content: center;
-    flex-direction:column ;
+    /* flex-direction:row; */
     /* margin: 20px; */
-    font-size: 30px;
+    font-size: 40px;
 }
 .footer-text{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-around;
     width: 100%;
 }
@@ -1179,7 +1246,13 @@ textarea {
 }
 .social-icon a {
     text-decoration: none;
-    font-size: smaller;
+    /* font-size: smaller; */
+   
+}
+.social-icon a:hover {
+color:green;
+  transition: 0.5s;
+  transform: scale(1.5);
 }
 .footer-text div {
     display: flex;
@@ -1212,13 +1285,18 @@ textarea {
 }
 
 @media (max-width: 500px) {
+    .dtl {
+        display:block;
+    }
+    .container2{
+        display: none;
+    }
     .pol-text {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
         font-size: small;
     }
-
     .Box {
         flex-direction: column-reverse;
         /* height: auto; */

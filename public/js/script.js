@@ -25,27 +25,6 @@ function closebar() {
  
 
 const m = document.getElementById('responsiveImage');
-
-console.log(m);
-
 if (window.matchMedia("(max-width: 500px)").matches) {
     m.src = '/images/bgImg2.png';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

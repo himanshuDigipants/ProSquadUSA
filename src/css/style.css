@@ -9,10 +9,6 @@ body {
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     scroll-behavior:smooth;
   background-color: #ddd;
- 
-
-
-
 }
  /* **********expertBox small screen********** */
  .dtl {
@@ -204,7 +200,7 @@ nav ul li:hover::after {
     align-items: center;
     margin-left: 1%;
     width: 98%;
-    /* height: 80vh; */
+    height: 80vh;
     border-radius: 10px;
     align-items: center;
     background-color: #1d3557;
@@ -221,9 +217,7 @@ nav ul li:hover::after {
     border-radius: 15px;
     margin: 15px;
     width: 45%;
-    height: 40vh;
-
-
+    height: 50vh;
 }
 
 .contentContainer div {
@@ -524,8 +518,96 @@ width: 100px;
     transition: 0.5s;
 }
 
-.answerBox {
+/* animated answer box start */
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 50px auto;
+    overflow: hidden;
+  
+}
+
+.carousel {
     display: flex;
+    transition: transform 0.5s ease-in-out;
+   
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 400px;
+    
+}
+
+.carousel-item h1 {
+    font-size: 2.5rem;
+   color: #000;
+   font-weight:900;
+   margin-top: 0;
+}
+.carousel-item p {
+    font-size: 1.5rem;
+   margin-bottom: 30px;
+   font-style: oblique;
+}
+.carousel-item div {
+   margin-bottom: 50px;
+}
+.carousel-item h6 {
+  font-size: 14px;
+   margin-bottom: 30px;
+   margin-top: -15px;
+   font-weight: 100;
+   
+}
+.carousel-item i {
+  font-size: 2rem;
+  font-weight: 500;
+  
+}
+
+.carousel-btn {
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+ 
+}
+
+#prevBtn {
+    left: 10px;
+ 
+  
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* animated answer box end */
+
+
+
+.answerBox {
+    display: none;
     height: 50vh;
     width: 100%;
     align-items: center;
@@ -1250,6 +1332,18 @@ color:green;
   .row1{
     width: 300px;
   }
+  .Box{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   .Box img{
+   width:80%;
+   height: auto;
+   }
+   .startBtn{
+     margin-left: 30px;
+     margin-top: 20px;
+   }
 }
 @media screen and (min-width: 501px) and (max-width:700px) {
   .row1{
@@ -1261,6 +1355,7 @@ color:green;
   .content{
     width: 100%;
   }
+ 
 }
 @media screen and (min-width: 1440px) {
     .Alldiv {
@@ -1285,13 +1380,14 @@ color:green;
     }
     .Box {
         flex-direction: column-reverse;
-        /* height: auto; */
+        height: auto;
     }
 
     .Box img {
-        width: 350px;
-        height: 400px;
-        /* margin-top: 130px; */
+        width: auto;
+        height: auto;
+        margin-top:-1px;
+        border-radius: 0%;
     }
 .col2{
     display: none;
@@ -1327,7 +1423,6 @@ color:green;
         font-size: x-small;
     }
 }
-
 .social-icons {
     display: flex;
     flex-direction: column;
@@ -1340,14 +1435,11 @@ color:green;
 
 .social-icons a {
     font-size: 30px;
-    /* float: left; */
     color: white;
     font-weight: 900;
     margin: 10px;
     text-decoration: none;
 }
-
-
 @media screen and (max-width: 1019px) {
     body {
         box-sizing: border-box;
@@ -1508,7 +1600,7 @@ color:green;
     }
 
     .answerBox {
-        display: flex;
+        display: none;
         flex-direction: column;
         height: auto;
     }

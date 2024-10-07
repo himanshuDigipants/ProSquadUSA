@@ -76,4 +76,55 @@ autoSlide();
 
 
 
-// aniamted answer end
+// aniamted answerbox end
+
+// website initial loading
+
+document.addEventListener("DOMContentLoaded", function() {
+    let lazySections = [].slice.call(document.querySelectorAll(".lazy-section"));
+
+    if ("IntersectionObserver" in window) {
+        let lazySectionObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazySection = entry.target;
+                    lazySection.setAttribute('data-loaded', 'true');
+                    lazySection.classList.add("loaded");
+                    lazySectionObserver.unobserve(lazySection);
+                }
+            });
+        });
+
+        lazySections.forEach(function(lazySection) {
+            lazySectionObserver.observe(lazySection);
+        });
+    } else {
+        // Fallback for older browsers
+        let lazyLoadThrottleTimeout;
+        function lazyLoad() {
+            if (lazyLoadThrottleTimeout) {
+                clearTimeout(lazyLoadThrottleTimeout);
+            }
+
+            lazyLoadThrottleTimeout = setTimeout(function() {
+                let scrollTop = window.pageYOffset;
+                lazySections.forEach(function(section) {
+                    if (section.offsetTop < window.innerHeight + scrollTop) {
+                        section.setAttribute('data-loaded', 'true');
+                        section.classList.add('loaded');
+                    }
+                });
+
+                if (lazySections.length == 0) { 
+                    document.removeEventListener("scroll", lazyLoad);
+                    window.removeEventListener("resize", lazyLoad);
+                    window.removeEventListener("orientationChange", lazyLoad);
+                }
+            }, 20);
+        }
+
+        document.addEventListener("scroll", lazyLoad);
+        window.addEventListener("resize", lazyLoad);
+        window.addEventListener("orientationChange", lazyLoad);
+    }
+});

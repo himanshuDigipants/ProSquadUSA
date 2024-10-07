@@ -30,14 +30,11 @@
     <meta property="og:site_name" content="SquadOnCall" />
 
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/login.css">
     <script
       src="https://kit.fontawesome.com/595b8d3a3f.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -72,12 +69,52 @@
           </li>
           <li><a href="/help">Help</a></li>
           <li><a href="/contact">Contact Us</a></li>
-          <button class="btn1">Log In</button>
+          <button class="btn1" id="loginBtn">Log In</button>
           <i class="fas fa-times" onclick="closebar()"></i>
         </ul>
         <i class="fas fa-bars" onclick="openbar()"></i>
       </nav>
     </div>
+
+    <!-- login form  -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Login</h2>
+          <form id="loginForm">
+              <label for="username">Username</label>
+              <input type="text" id="username" required>
+              
+              <label for="password">Password</label>
+              <input type="password" id="password" required>
+              
+              <button type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
+     <!-- login form ends -->
+      <!-- sign up form  starts-->
+
+      <div class="signup-form">
+        <h2>Sign Up</h2>
+        <form action="submit-form.php" method="post">
+            <!-- Username -->
+            <input type="text" name="username" placeholder="Username" required>
+            
+            <!-- Email -->
+            <input type="email" name="email" placeholder="Email" required>
+            
+            <!-- Password -->
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <!-- Date of Birth -->
+            <input type="date" name="dob" placeholder="Date of Birth" required>
+            
+            <!-- Submit Button -->
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+      <!-- sign up form ends -->
     <div class="Alldiv">
       <div class="Box">
         <div class="contentContainer">
@@ -89,7 +126,7 @@
             <div><a href="" class="bgBtn">Smart Home & Security</a></div>
           </div>
           <div class="textContent">
-            <h1 class="animate__bounceInUp">
+            <h1>
               Expert help at your fingertips.Anytime, anywhere.
             </h1>
             <p>
@@ -131,7 +168,7 @@
           class="fa fa-instagram"
         ></a>
       </div>
-      <div class="works lazy-section" data-loaded="false">
+      <div class="works">
         <div class="col1">
           <div class="mainContent">
             <h1>How it Works ?</h1>
@@ -405,7 +442,8 @@
       
         <button id="prevBtn" class="carousel-btn">❮</button>
         <div class="carousel">
-            <div class="carousel-item" style="background:linear-gradient(rgba(64, 130, 54, 0.62),#26498a)">
+            <div class="carousel-item" style=" background-color: #1d3557 ">
+              <!-- linear-gradient(rgba(64, 130, 54, 0.62),#26498a) -->
               <div>
                 <h1>All answers in one place</h1>
                 <h6>
@@ -422,7 +460,7 @@
                </div>
                 <p><i class="fas fa-question-circle"></i> &nbsp;My doorbell is displaying an offline status. How to fix it?</p>
             </div>
-            <div class="carousel-item" style="background:linear-gradient(rgba(64, 130, 54, 0.62),#26498a)">
+            <div class="carousel-item" style=" background-color: #1d3557 ">
               <div>
                 <h1>All answers in one place</h1>
                 <h6>
@@ -439,7 +477,7 @@
                </div>
                 <p><i class="fas fa-question-circle"></i> &nbsp;I'm getting an error message on my Google Nest device. Can you help?</p>
             </div>
-            <div class="carousel-item" style="background:linear-gradient(rgba(64, 130, 54, 0.62),#26498a)">
+            <div class="carousel-item" style=" background-color: #1d3557 ">
               <div>
                 <h1>All answers in one place</h1>
                 <h6>
@@ -456,7 +494,7 @@
                </div>
                 <p><i class="fas fa-question-circle"></i> &nbsp;How to connect my Night Owl security camera to my mobile phone?</p>
             </div>
-            <div class="carousel-item" style="background:linear-gradient(rgba(64, 130, 54, 0.62),#26498a)">
+            <div class="carousel-item" style=" background-color: #1d3557 ">
               <div>
                 <h1>All answers in one place</h1>
                 <h6>
@@ -473,7 +511,7 @@
                </div>
                 <p><i class="fas fa-question-circle"></i> &nbsp;How to connect my Night Owl security camera to my mobile phone?</p>
             </div>
-            <div class="carousel-item" style="background:linear-gradient(rgba(64, 130, 54, 0.62),#26498a)">
+            <div class="carousel-item" style=" background-color: #1d3557 ">
               <div>
                 <h1>All answers in one place</h1>
                 <h6>
@@ -490,7 +528,7 @@
                </div>
                 <p> <i class="fas fa-question-circle"></i> &nbsp;I'm getting an error message on my Google Nest device. Can you help?</p>
             </div>
-            <div class="carousel-item" style="background:linear-gradient(rgba(64, 130, 54, 0.62),#26498a)">
+            <div class="carousel-item" style=" background-color: #1d3557 ">
                <div>
                 <h1>All answers in one place</h1>
                 <h6>
@@ -668,7 +706,16 @@
         </div>
       </div>
     </footer>
-
+<!-- Begin of Chaport Live Chat code -->
+<script type="text/javascript">
+  (function(w,d,v3){
+  w.chaportConfig = {
+  appId : '66fe7c21960cd098933302dc'
+  };
+  
+  if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+  </script>
+  <!-- End of Chaport Live Chat code -->
     <script src="/js/script.js"></script>
   </body>
 </html>

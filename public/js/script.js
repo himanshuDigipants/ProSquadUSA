@@ -22,7 +22,6 @@ function openbar() {
 function closebar() {
     menubar.style.top = "-100%"
 }
- 
 
 // aniamted answer box start
 
@@ -126,5 +125,51 @@ document.addEventListener("DOMContentLoaded", function() {
         document.addEventListener("scroll", lazyLoad);
         window.addEventListener("resize", lazyLoad);
         window.addEventListener("orientationChange", lazyLoad);
+    }
+});
+
+
+// login form
+
+// Get elements from the DOM
+const loginBtn = document.getElementById('loginBtn');
+const loginModal = document.getElementById('loginModal');
+const closeBtn = document.querySelector('.close');
+const body = document.body;
+const loginForm = document.getElementById('loginForm');
+
+// Open the modal on clicking "Login" button
+loginBtn.addEventListener('click', () => {
+    loginModal.style.display = 'flex'; // Show modal
+    body.add('blur');
+    body.style.height='90vh'        // Blur the background
+});
+
+// Close the modal when clicking the close button (X)
+closeBtn.addEventListener('click', () => {
+    loginModal.style.display = 'none'; // Hide modal
+    body.classList.remove('blur');     // Remove background blur
+});
+
+// Close the modal when clicking outside of the form
+window.addEventListener('click', (event) => {
+    if (event.target == loginModal) {
+        loginModal.style.display = 'none';
+        body.classList.remove('blur');
+    }
+});
+
+// Handle form submission (simple validation and redirect)
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent form submission
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Simple authentication (can be replaced with real logic)
+    if (username === 'admin' && password === 'password') {
+        alert('Login successful!');
+        window.location.href = 'index.html'; // Redirect to index.html
+    } else {
+        alert('Invalid login credentials');
     }
 });
